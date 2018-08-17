@@ -1,49 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <title>Weather widgets</title>
-    <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  </head>
-  <body>
-      <div id='introBox'>
-          <h1>API WEATHER CARDS</h1>
-          <p id='intro'>
-            This widgets use 2 different API weather tools to fetch information. The Mars card reflects the information send back by the Curiosity Rover in Mars.
-            The rover has 2 boom sensors on its mast in order to gather environmental information.
-            Although the rover is intented to send information back daily, extreme weather might make it impossible.
-            This widget reflects the latest data published by the Centro the Astrobiologia (CAB), Spain.
-            <br><br>
-            The other three widget cards use longitude and latitude points to access the openweathermap.org API.
-    
-          </p>
-        </div>
 
-    <div id="root"></div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <title>Weather widgets</title>
+  <link href="https://fonts.googleapis.com/css?family=Rosario" rel="stylesheet">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+</head>
 
-    <dl id='description'>
-        <h1>Reading the Mars Weather</h1>
-        <dt>◗ Sol</dt>
-        <dd>The term sol is used to refer to the duration of a day on Mars. A sol is about 24 hours and 40 minutes. For Curiosity, sol 0 corresponds with its landing day on Mars.</dd>
-        <dt>◗ Season</dt>
-        <dd>A Martian year is divided in 12 months, as Earth's. However, Martian months are from 46 to 67 sols (Martian days) long. The longest one is the month 3 (67 sols), and the shortest one is the month 9 (46 sols) Martian months mark seasonal changes. In the southern hemisphere (Curiosity rover location) the autumn starts in month 1; the winter in month 4; the spring in month 7; and the summer in month 10.</dd>
-        <dt>◗ Temperature</dt>
-        <dd>Mars is farther from the Sun than Earth, it makes that Mars is colder than our planet. Moreover, Martian atmosphere, which is extremely tenuous, does not retain the heat; hence the difference between day and night's temperatures is more pronounced than in our planet.</dd>
-        <dt>◗ Opacity</dt>
-        <dd>Weather on Mars is more extreme than Earth's. Mars is cooler and with bigger differences between day and night temperatures. Moreover, dust storms lash its surface. However, Mars' and Earth's climates have important similarities, such as the polar ice caps or seasonal changes. As on Earth, on Mars we can have sunny, cloudy or windy days, for example.</dd>
-        <dt>◗ Sunset and Sunrise</dt>
-        <dd>The duration of a Martian day (sol) is about 24 hours and 40 minutes. The duration of daylight varies along the Martian year, as on Earth.</dd>
-      </dl>
-      <footer>
-        <p>
-          For more information visit <a href="https://mars.nasa.gov/msl/mission/instruments/environsensors/rems/" target='_blank'>Nasa Rems</a> and <a href="http://www.cab.inta.es/es/inicio" target='_blank'>Centro de Astrobiologia</a>
-        </p>
-      </footer>
+<body>
+  <div id="root"></div>
+</body>
 
-
-  </body>
 </html>
