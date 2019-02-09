@@ -150,6 +150,7 @@ class CardSet extends Component {
       })
       .then(
         function(data) {
+          console.log(data);
           let newState = { ...this.state };
           newState.mars.sol = String(data.sol);
           newState.mars.month = data.season.split(" ")[1];

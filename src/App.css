@@ -1,32 +1,45 @@
 /*PAGE BASIC SETUP*/
 html{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *{
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 *::selection {
   background: #ffb7b700; /* WebKit/Blink Browsers */
 }
 body{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: 'Rosario', sans-serif;
-  background: #fffed2;
-  color: #3b3b3b;
+  background: rgb(255, 254, 210);
+  color: rgb(59, 59, 59);
 }
 /*INTRO BOX AND TITLE*/
 #introBox {
-text-align: center;
-align-self: center;
-letter-spacing: 3px;
-padding: 30px;
-margin-top: 50px;
-max-width: 900px;
-border-top: solid 5px;
-border-bottom: solid 5px;
+	text-align: center;
+	-ms-flex-item-align: center;
+	align-self: center;
+	letter-spacing: 3px;
+	padding: 30px;
+	max-width: 900px;
+	border-top: solid 5px;
+	border-bottom: solid 5px;
+	margin: auto;
+	margin-top: 50px;
 }
 #introBox > h1 {
 font-size: 3em;
@@ -37,8 +50,10 @@ font-size: 3em;
 
 /*MARS DESCRIPTION*/
 #description {
-max-width: 900px;
-border-top: solid 5px;
+	max-width: 900px;
+	border-top: solid 5px;
+	margin: auto;
+	margin-top: 50px;
 }
 dd {
 margin: 5px 0 10px 15px;
@@ -80,10 +95,18 @@ max-width: 1000px;
 width: 350px;
 height: 450px;
 border-radius: 10px;
-box-shadow: 0px 0px 1px 1px rgba(64, 63, 60, 0.27);
+-webkit-box-shadow: 0px 0px 1px 1px rgba(64, 63, 60, 0.27);
+        box-shadow: 0px 0px 1px 1px rgba(64, 63, 60, 0.27);
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
-flex-direction: column;
-align-items: center;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
 position: absolute;
 overflow: hidden;
 }
@@ -100,12 +123,13 @@ overflow: hidden;
   margin-bottom: 150px;
   text-align: center;
   width: 75%;
-  background: #0009;
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
   z-index: 15;
   font-size: 14px;
   pointer-events: none;
-  box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
+          box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
 }
 .foreground{
   position: absolute;
@@ -113,14 +137,16 @@ overflow: hidden;
   z-index: 10;
   width: 101%;
   pointer-events: none;
-  filter: blur(1px);
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
 }
 .sun{
   width: 150px;
   position: absolute;
   top: 100px;
   pointer-events: none;
-  filter: blur(2px);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 .meteor{
   position: absolute;
@@ -147,10 +173,11 @@ position: absolute;
   height: 70px;  
   padding: 15px;
 border-radius: 50px;
-background: #0009;
+background: rgba(0, 0, 0, 0.6);
 z-index: 15;
   top: 200px;
-  box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
+          box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
 }
 .weatherIcon > img{
   width: 100%;
@@ -158,9 +185,12 @@ z-index: 15;
 
 /*ROOT CARD*/
 .root {
-  transform: translate(18px, 18px);
+  -webkit-transform: translate(18px, 18px);
+          transform: translate(18px, 18px);
   z-index: 5;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   display: grid;
   grid-template-rows: repeat(4, 95px);
   grid-template-columns: 1fr 1fr;
@@ -171,17 +201,27 @@ z-index: 15;
 .root > div{
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 15px;
-  color: #ebebeb;
+  color: rgb(235, 235, 235);
   font-weight: bolder;
   letter-spacing: 2px;
-  background: #0000002e;
+  background: rgba(0, 0, 0, 0.18);
   border-radius: 3px;
-  box-shadow: 0px 0px 5px 0px #8b8b8b29;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(139, 139, 139, 0.161);
+          box-shadow: 0px 0px 5px 0px rgba(139, 139, 139, 0.161);
   pointer-events: none;
 }
 .root > div > p{
@@ -194,96 +234,162 @@ grid-column: 1/-1;
 /*=============SHOW ROOT==========================*/
 
 .headerDown{
-animation-duration: 300ms;
-  animation-name: headerDown;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
+-webkit-animation-duration: 300ms;
+        animation-duration: 300ms;
+  -webkit-animation-name: headerDown;
+          animation-name: headerDown;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 10;
 }
 
 .rootUp{
-animation-duration: 300ms;
-  animation-name: rootUp;
-  animation-iteration-count: 1;
-  animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
+-webkit-animation-duration: 300ms;
+        animation-duration: 300ms;
+  -webkit-animation-name: rootUp;
+          animation-name: rootUp;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 5;
 }
 
+@-webkit-keyframes	headerDown{
+0%{-webkit-transform: translate(0px);transform: translate(0px); z-index: 10;}
+50%{-webkit-transform: translate(-100px);transform: translate(-100px);}
+100%{-webkit-transform: translate(0px);transform: translate(0px); z-index: 5;}
+}
+
 @keyframes	headerDown{
-0%{transform: translate(0px); z-index: 10;}
-50%{transform: translate(-100px);}
-100%{transform: translate(0px); z-index: 5;}
+0%{-webkit-transform: translate(0px);transform: translate(0px); z-index: 10;}
+50%{-webkit-transform: translate(-100px);transform: translate(-100px);}
+100%{-webkit-transform: translate(0px);transform: translate(0px); z-index: 5;}
+}
+
+@-webkit-keyframes	rootUp{
+0%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 5;}
+50%{-webkit-transform: translate(120px,20px);transform: translate(120px,20px);}
+100%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 10;}
 }
 
 @keyframes	rootUp{
-0%{transform: translate(18px, 18px);z-index: 5;}
-50%{transform: translate(120px,20px);}
-100%{transform: translate(18px, 18px);z-index: 10;}
+0%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 5;}
+50%{-webkit-transform: translate(120px,20px);transform: translate(120px,20px);}
+100%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 10;}
 }
 
 /*=============SHOW HEADER==========================*/
 
 .headerUp{
-animation-duration: 300ms;
-  animation-name: headerUp;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
+-webkit-animation-duration: 300ms;
+        animation-duration: 300ms;
+  -webkit-animation-name: headerUp;
+          animation-name: headerUp;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 5;
 }
 
 .rootDown{
-animation-duration: 300ms;
-  animation-name: rootDown;
-  animation-iteration-count: 1;
-  animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  animation-fill-mode: forwards;
+-webkit-animation-duration: 300ms;
+        animation-duration: 300ms;
+  -webkit-animation-name: rootDown;
+          animation-name: rootDown;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 10;
 }
 
+@-webkit-keyframes	headerUp{
+0%{-webkit-transform: translate(0px);transform: translate(0px);z-index: 5;}
+50%{-webkit-transform: translate(-100px);transform: translate(-100px);}
+100%{-webkit-transform: translate(0px);transform: translate(0px);z-index: 10;}
+}
+
 @keyframes	headerUp{
-0%{transform: translate(0px);z-index: 5;}
-50%{transform: translate(-100px);}
-100%{transform: translate(0px);z-index: 10;}
+0%{-webkit-transform: translate(0px);transform: translate(0px);z-index: 5;}
+50%{-webkit-transform: translate(-100px);transform: translate(-100px);}
+100%{-webkit-transform: translate(0px);transform: translate(0px);z-index: 10;}
+}
+@-webkit-keyframes	rootDown{
+0%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 10;}
+50%{-webkit-transform: translate(120px,20px);transform: translate(120px,20px);}
+100%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 5;}
 }
 @keyframes	rootDown{
-0%{transform: translate(18px, 18px);z-index: 10;}
-50%{transform: translate(120px,20px);}
-100%{transform: translate(18px, 18px);z-index: 5;}
+0%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 10;}
+50%{-webkit-transform: translate(120px,20px);transform: translate(120px,20px);}
+100%{-webkit-transform: translate(18px, 18px);transform: translate(18px, 18px);z-index: 5;}
 }
 
 /*======================METEOR SHOWER=======================*/
 
 .meteorShower{
-  animation-name: meteorShower;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: meteorShower;
+          animation-name: meteorShower;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #meteor1{
-animation-duration: 1.5s;
+-webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
 }
 #meteor2{
-animation-duration: 1.7s;
+-webkit-animation-duration: 1.7s;
+        animation-duration: 1.7s;
 }
 #meteor3{
-animation-duration: 2s;
+-webkit-animation-duration: 2s;
+        animation-duration: 2s;
+}
+
+
+@-webkit-keyframes	meteorShower{
+0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px); opacity: 0.7  ;}
+100%{-webkit-transform: translate(-304px, 173px);transform: translate(-304px, 173px); opacity: 0}
 }
 
 
 @keyframes	meteorShower{
-0%{transform: translate(0px, 0px); opacity: 0.7  ;}
-100%{transform: translate(-304px, 173px); opacity: 0}
+0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px); opacity: 0.7  ;}
+100%{-webkit-transform: translate(-304px, 173px);transform: translate(-304px, 173px); opacity: 0}
 }
 /*============================DARKEN SKY=======================================*/
 
 .darkenSky{
-animation-name: darkenSky;
-animation-timing-function: ease;
-animation-fill-mode: forwards;
-animation-duration: 8s;
+-webkit-animation-name: darkenSky;
+        animation-name: darkenSky;
+-webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+-webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+-webkit-animation-duration: 8s;
+        animation-duration: 8s;
+}
+
+@-webkit-keyframes darkenSky{
+  0%{background-position:42% 0%}
+  100%{background-position:59% 100%}
+  
 }
 
 @keyframes darkenSky{
@@ -296,14 +402,23 @@ animation-duration: 8s;
 /*============================SUNSET=======================================*/
 
 .sunset{
-animation-name: sunset;
-animation-timing-function: ease;
-animation-fill-mode: forwards;
-animation-duration: 8s;
+-webkit-animation-name: sunset;
+        animation-name: sunset;
+-webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+-webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+-webkit-animation-duration: 8s;
+        animation-duration: 8s;
+}
+
+@-webkit-keyframes sunset{
+  0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px)}
+  100%{-webkit-transform: translate(0px, 213px);transform: translate(0px, 213px)}
 }
 
 @keyframes sunset{
-  0%{transform: translate(0px, 0px)}
-  100%{transform: translate(0px, 213px)}
+  0%{-webkit-transform: translate(0px, 0px);transform: translate(0px, 0px)}
+  100%{-webkit-transform: translate(0px, 213px);transform: translate(0px, 213px)}
 }
 
