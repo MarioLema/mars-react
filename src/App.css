@@ -59,10 +59,9 @@ dd {
 margin: 5px 0 10px 15px;
 text-align: justify;
 }
-
 /*LINKS*/
 a:link{
-color: white;
+color: black;
 text-decoration: none;
 }
 a:hover{
@@ -114,12 +113,13 @@ overflow: hidden;
 .header {
   z-index: 10;
 }
-.header h1{
+.header > h1{
   border-radius: 5px;
   padding: 14px;
   letter-spacing: 5px;
   position: absolute;
   top: 80px;
+  margin: auto 43px;
   margin-bottom: 150px;
   text-align: center;
   width: 75%;
@@ -130,6 +130,7 @@ overflow: hidden;
   pointer-events: none;
   -webkit-box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
           box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
+          align-self: center;
 }
 .foreground{
   position: absolute;
@@ -173,9 +174,11 @@ position: absolute;
   height: 70px;  
   padding: 15px;
 border-radius: 50px;
+margin: auto 140px;
 background: rgba(0, 0, 0, 0.6);
 z-index: 15;
   top: 200px;
+  align-self: center;
   -webkit-box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
           box-shadow: 0px 0px 3px 1px rgba(69, 54, 54, 0.54);
 }
