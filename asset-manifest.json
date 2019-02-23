@@ -1,7 +1,7 @@
 {
-  "main.css": "/mars-react/static/css/main.74493ee0.chunk.css",
-  "main.js": "/mars-react/static/js/main.f768f1df.chunk.js",
-  "main.js.map": "/mars-react/static/js/main.f768f1df.chunk.js.map",
+  "main.css": "/mars-react/static/css/main.086e38a6.chunk.css",
+  "main.js": "/mars-react/static/js/main.c638127a.chunk.js",
+  "main.js.map": "/mars-react/static/js/main.c638127a.chunk.js.map",
   "static/js/1.761b1eaa.chunk.js": "/mars-react/static/js/1.761b1eaa.chunk.js",
   "static/js/1.761b1eaa.chunk.js.map": "/mars-react/static/js/1.761b1eaa.chunk.js.map",
   "runtime~main.js": "/mars-react/static/js/runtime~main.c569b4e8.js",
@@ -25,8 +25,8 @@
   "static/media/meteor2.svg": "/mars-react/static/media/meteor2.6b7d3b3f.svg",
   "static/media/meteor3.svg": "/mars-react/static/media/meteor3.1bc0cc4d.svg",
   "static/media/sun.svg": "/mars-react/static/media/sun.c6784d10.svg",
-  "static/css/main.74493ee0.chunk.css.map": "/mars-react/static/css/main.74493ee0.chunk.css.map",
+  "static/css/main.086e38a6.chunk.css.map": "/mars-react/static/css/main.086e38a6.chunk.css.map",
   "index.html": "/mars-react/index.html",
-  "precache-manifest.c6b03b7c6be97fd91a200403f3aa9808.js": "/mars-react/precache-manifest.c6b03b7c6be97fd91a200403f3aa9808.js",
+  "precache-manifest.152e67f0ec5afd60586dc5c3b736ab12.js": "/mars-react/precache-manifest.152e67f0ec5afd60586dc5c3b736ab12.js",
   "service-worker.js": "/mars-react/service-worker.js"
 }
