@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/mars-react/static/media/storm.2827189b.svg"
   },
   {
-    "revision": "c638127a7346f1496d97",
-    "url": "/mars-react/static/css/main.086e38a6.chunk.css"
+    "revision": "00a245a9414d651bbe2e",
+    "url": "/mars-react/static/css/main.86215611.chunk.css"
   },
   {
     "revision": "761b1eaa46efa43342cc",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/mars-react/static/media/cloudy.2d36f863.svg"
   },
   {
-    "revision": "c638127a7346f1496d97",
-    "url": "/mars-react/static/js/main.c638127a.chunk.js"
+    "revision": "00a245a9414d651bbe2e",
+    "url": "/mars-react/static/js/main.00a245a9.chunk.js"
   },
   {
     "revision": "18e4f08800dafac2d1bd72e57902a675",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/mars-react/static/media/sun.c6784d10.svg"
   },
   {
-    "revision": "4c59d9094ff4658df1982048112cdad1",
+    "revision": "996693f78ba9a02b650e9342daaf0494",
     "url": "/mars-react/index.html"
   }
 ];
