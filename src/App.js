@@ -21,11 +21,14 @@ import Sun from "./images/sun.svg";
 
 import "./App.css";
 
+
+const axios = require('axios');
 //====================PARENT COMPONENT======================
 class CardSet extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      apiCallMade: false,
       icons: {
         Drizzle: Drizzle,
         Rain: Rain,
@@ -142,65 +145,70 @@ class CardSet extends Component {
   }
   //==========Mars API call=============
   marsAPICall() {
-    fetch("https://api.maas2.jiinxt.com/")
-      .then(function(response) {
-        if (response.ok) {
-          return response.json();
-        }
-      })
-      .then(
-        function(data) {
-          console.log(data);
-          let newState = { ...this.state };
-          newState.mars.sol = String(data.sol);
-          newState.mars.month = data.season.split(" ")[1];
-          newState.mars.maxC = `${data.max_temp}\xB0`;
-          newState.mars.minC = `${data.min_temp}\xB0`;
-          newState.mars.opacity = data.atmo_opacity;
-          newState.mars.sunset = data.sunset;
-          newState.mars.sunrise = data.sunrise;
-          this.setState(newState);
-        }.bind(this)
-      );
+    axios.get("https://api.maas2.jiinxt.com/")
+  .then(function (response) {
+    // handle success
+    let data = response.data;
+      let newState = { ...this.state };
+      newState.mars.sol = String(data.sol);
+      newState.mars.month = data.season.split(" ")[1];
+      newState.mars.maxC = `${data.max_temp}\xB0`;
+      newState.mars.minC = `${data.min_temp}\xB0`;
+      newState.mars.opacity = data.atmo_opacity;
+      newState.mars.sunset = data.sunset;
+      newState.mars.sunrise = data.sunrise;
+      this.setState(newState);
+  }.bind(this))
+
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
   }
   //==========Weather API call=============
   weatherCall(lat, lon, location) {
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=04404d9c365d16b696cd5e74c310b080`;
-    fetch(url)
-      .then(function(response) {
-        return response.ok ? response.json() : console.log("No data received");
-      })
-      .then(
-        function(data) {
-          let newState = { ...this.state };
-          newState[location].humidity = data.main.humidity;
-          newState[location].maxC =
-            Math.round((data.main.temp_max - 32) * (5 / 9)) + `\xB0`;
-          newState[location].minC =
-            Math.round((data.main.temp_min - 32) * (5 / 9)) + `\xB0`;
-          newState[location].name = data.name;
-          newState[location].visibility = data.weather[0].main;
-          newState[location].sunrise = this.timeChange(data.sys.sunrise);
-          newState[location].sunset = this.timeChange(data.sys.sunset);
-          this.setState(newState);
-        }.bind(this)
-      );
+    axios.get(url)
+  .then(function (response) {
+    // handle success
+    let data = response.data;
+    let newState = { ...this.state };
+    newState[location].humidity = data.main.humidity;
+    newState[location].maxC =
+      Math.round((data.main.temp_max - 32) * (5 / 9)) + `\xB0`;
+    newState[location].minC =
+      Math.round((data.main.temp_min - 32) * (5 / 9)) + `\xB0`;
+    newState[location].name = data.name;
+    newState[location].visibility = data.weather[0].main;
+    newState[location].sunrise = this.timeChange(data.sys.sunrise);
+    newState[location].sunset = this.timeChange(data.sys.sunset);
+    this.setState(newState);
+  }.bind(this))
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
   }
   //==========On Load API calls=============
   onLoadAPICalls() {
-    this.marsAPICall();
-    this.weatherCall("35.658581", "139.745438", "tokyo");
-    this.weatherCall("40.758896", "-73.985130", "newYork");
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        function(position) {
-          this.weatherCall(
-            position.coords.latitude,
-            position.coords.longitude,
-            "local"
-          );
-        }.bind(this)
-      );
+    if(!this.state.apiCallMade){
+      this.marsAPICall();
+      this.weatherCall("35.658581", "139.745438", "tokyo");
+      this.weatherCall("40.758896", "-73.985130", "newYork");
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function(position) {
+            this.weatherCall(
+              position.coords.latitude,
+              position.coords.longitude,
+              "local"
+            );
+          }.bind(this)
+        );
+      }
+      let newState = { ...this.state };
+      newState.apiCallMade = true;
+      this.setState(newState);
     }
   }
   //==========Seconds to hh:mm converter=============
