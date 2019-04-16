@@ -28,7 +28,6 @@ class CardSet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      apiCallMade: false,
       icons: {
         Drizzle: Drizzle,
         Rain: Rain,
@@ -141,7 +140,6 @@ class CardSet extends Component {
     };
     this.marsAPICall = this.marsAPICall.bind(this);
     this.weatherCall = this.weatherCall.bind(this);
-    this.onLoadAPICalls = this.onLoadAPICalls.bind(this);
   }
   //==========Mars API call=============
   marsAPICall() {
@@ -190,8 +188,7 @@ class CardSet extends Component {
   })
   }
   //==========On Load API calls=============
-  onLoadAPICalls() {
-    if(!this.state.apiCallMade){
+  componentDidMount() {
       this.marsAPICall();
       this.weatherCall("35.658581", "139.745438", "tokyo");
       this.weatherCall("40.758896", "-73.985130", "newYork");
@@ -206,10 +203,6 @@ class CardSet extends Component {
           }.bind(this)
         );
       }
-      let newState = { ...this.state };
-      newState.apiCallMade = true;
-      this.setState(newState);
-    }
   }
   //==========Seconds to hh:mm converter=============
   timeChange(sec) {
@@ -229,7 +222,7 @@ class CardSet extends Component {
     return (
       <React.Fragment>
         <Intro />
-        <div onLoad={this.onLoadAPICalls}>
+        <div>
           <WeatherCard location={this.state.mars} icons={this.state.icons} />
           <WeatherCard location={this.state.local} icons={this.state.icons} />
           <WeatherCard location={this.state.newYork} icons={this.state.icons} />
