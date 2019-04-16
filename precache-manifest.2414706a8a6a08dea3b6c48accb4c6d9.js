@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/mars-react/static/media/storm.2827189b.svg"
   },
   {
-    "revision": "433aa4c9ad977d35ff19",
+    "revision": "5d5f1fa12f82f2b85d86",
     "url": "/mars-react/static/css/main.a9f8d706.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/mars-react/static/js/runtime~main.e20d53ec.js"
   },
   {
-    "revision": "813818cd93e1c1a42126",
-    "url": "/mars-react/static/js/2.bfa6feab.chunk.js"
+    "revision": "facbf185a6619289e90f",
+    "url": "/mars-react/static/js/2.dd325c3b.chunk.js"
   },
   {
     "revision": "aee469f8bfa7c03761144393c57f9819",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/mars-react/static/media/cloudy.2d36f863.svg"
   },
   {
-    "revision": "433aa4c9ad977d35ff19",
-    "url": "/mars-react/static/js/main.38236610.chunk.js"
+    "revision": "5d5f1fa12f82f2b85d86",
+    "url": "/mars-react/static/js/main.cbc968cc.chunk.js"
   },
   {
     "revision": "18e4f08800dafac2d1bd72e57902a675",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/mars-react/static/media/sun.c6784d10.svg"
   },
   {
-    "revision": "0a3447d9a9afc9081d6b1cbe23581643",
+    "revision": "b237331ddb529edba1f5c1e168f53a67",
     "url": "/mars-react/index.html"
   }
 ];
