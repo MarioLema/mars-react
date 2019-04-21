@@ -2,7 +2,7 @@
   "name": "weather-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mariolema.github.io",
+  "homepage": "https://mariolema.github.io/mars-react/",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.8.6",
