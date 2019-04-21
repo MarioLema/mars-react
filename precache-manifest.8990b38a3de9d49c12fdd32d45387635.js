@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/mars-react/static/js/runtime~main.e20d53ec.js"
   },
   {
-    "revision": "facbf185a6619289e90f",
-    "url": "/mars-react/static/js/2.dd325c3b.chunk.js"
+    "revision": "a1ac53545f219399e660",
+    "url": "/mars-react/static/js/2.9f8f9e95.chunk.js"
   },
   {
     "revision": "aee469f8bfa7c03761144393c57f9819",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/mars-react/static/media/sun.c6784d10.svg"
   },
   {
-    "revision": "b237331ddb529edba1f5c1e168f53a67",
+    "revision": "19d5eeaa5442c0eed126dd8ac1e6d20c",
     "url": "/mars-react/index.html"
   }
 ];
